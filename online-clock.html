@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online clock showing the current time in 12-hour or 24-hour format. Displays date, day of week, and local timezone.">
+  <title>Online Clock — Current Time — TimeAnything</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">Time<span class="logo-accent">Anything</span></a>
+    <nav class="header-nav"><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+  </div>
+</header>
+<button class="sidebar-toggle" id="sidebar-toggle-btn" aria-expanded="false" aria-controls="sidebar">&#9776; Timers</button>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar-nav" aria-label="Timer navigation">
+      <span class="sidebar-heading">Timers</span>
+      <ul>
+        <li><a href="pomodoro.html">Pomodoro Timer</a></li>
+        <li><a href="stopwatch.html">Online Stopwatch</a></li>
+        <li><a href="countdown-timer.html">Countdown Timer</a></li>
+        <li><a href="interval-timer.html">Interval Timer</a></li>
+        <li><a href="online-clock.html">Online Clock</a></li>
+        <li><a href="egg-timer.html">Egg / Kitchen Timer</a></li>
+        <li><a href="countdown-to-date.html">Countdown to Date</a></li>
+        <li><a href="focus-timer.html">Focus Timer</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main-content">
+    <div class="tool-header">
+      <h1>Online Clock</h1>
+      <p class="tool-tagline">Current time with date, day, and timezone — updated every second.</p>
+    </div>
+    <section class="tool-section" aria-label="Online clock">
+      <p class="clock-day" id="clock-day"></p>
+      <div class="clock-display" id="clock-display" aria-live="polite"></div>
+      <p class="clock-date" id="clock-date"></p>
+      <p style="text-align:center;font-size:12.5px;color:var(--text-muted);margin-top:4px;" id="clock-tz"></p>
+      <div style="display:flex;justify-content:center;margin-top:16px;">
+        <label class="check-label">
+          <input type="checkbox" id="clock-24h"> 24-hour format
+        </label>
+      </div>
+    </section>
+    <div class="ad-slot" aria-label="Advertisement"><span class="ad-label">Advertisement</span></div>
+    <div class="content-sections">
+      <section class="content-block">
+        <h2>About this clock</h2>
+        <p>This clock displays your local system time as reported by your browser. It updates every second and shows the current time, date, day of the week, and your local timezone.</p>
+        <p>Toggle between 12-hour (AM/PM) and 24-hour format using the checkbox below the clock.</p>
+      </section>
+      <section class="content-block">
+        <h2>Common uses</h2>
+        <ul>
+          <li>Quickly checking the current time without unlocking your phone</li>
+          <li>Keeping a visible clock open in a second monitor or browser tab</li>
+          <li>Verifying what timezone your browser is set to</li>
+          <li>Display clocks for presentations or video recordings</li>
+        </ul>
+      </section>
+      <div class="ad-slot" aria-label="Advertisement"><span class="ad-label">Advertisement</span></div>
+      <section class="content-block faq-section">
+        <h2>FAQ</h2>
+        <dl>
+          <dt>Is this my local time?</dt>
+          <dd>Yes. The clock reads time directly from your browser and device, so it reflects your local timezone.</dd>
+          <dt>Can I display a different timezone?</dt>
+          <dd>Not currently — the clock shows your device's system time. For world clock functionality, your browser's developer tools or a dedicated world clock site would be needed.</dd>
+          <dt>How accurate is it?</dt>
+          <dd>It is as accurate as your device's system clock. Most computers sync their clocks via NTP and are accurate to within a second.</dd>
+        </dl>
+      </section>
+    </div>
+  </main>
+</div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-copy">&copy; 2025 TimeAnything</span>
+    <nav class="footer-nav" aria-label="Footer links">
+      <a href="about.html">About</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/tools/clock.js"></script>
+</body>
+</html>

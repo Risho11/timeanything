@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact TimeAnything with questions, feedback, or tool suggestions.">
+  <title>Contact — TimeAnything</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">Time<span class="logo-accent">Anything</span></a>
+    <nav class="header-nav"><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+  </div>
+</header>
+<button class="sidebar-toggle" id="sidebar-toggle-btn" aria-expanded="false" aria-controls="sidebar">&#9776; Timers</button>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar-nav" aria-label="Timer navigation">
+      <span class="sidebar-heading">Timers</span>
+      <ul>
+        <li><a href="pomodoro.html">Pomodoro Timer</a></li>
+        <li><a href="stopwatch.html">Online Stopwatch</a></li>
+        <li><a href="countdown-timer.html">Countdown Timer</a></li>
+        <li><a href="interval-timer.html">Interval Timer</a></li>
+        <li><a href="online-clock.html">Online Clock</a></li>
+        <li><a href="egg-timer.html">Egg / Kitchen Timer</a></li>
+        <li><a href="countdown-to-date.html">Countdown to Date</a></li>
+        <li><a href="focus-timer.html">Focus Timer</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main-content">
+    <div class="static-page">
+      <h1>Contact</h1>
+      <p>Bug reports, questions, or timer suggestions — send them here.</p>
+      <form class="contact-form" id="contact-form" action="#" method="POST" novalidate>
+        <div class="control-group"><label for="contact-name">Name</label><input type="text" id="contact-name" name="name" autocomplete="name" required placeholder="Your name"></div>
+        <div class="control-group"><label for="contact-email">Email</label><input type="email" id="contact-email" name="email" autocomplete="email" required placeholder="you@example.com"></div>
+        <div class="control-group"><label for="contact-subject">Subject</label><input type="text" id="contact-subject" name="subject" required placeholder="Bug report, suggestion, other…"></div>
+        <div class="control-group"><label for="contact-message">Message</label><textarea id="contact-message" name="message" required placeholder="Describe your question or suggestion…"></textarea></div>
+        <button type="submit" class="btn btn-primary">Send</button>
+        <p class="form-note" id="form-status" aria-live="polite"></p>
+      </form>
+      <p style="margin-top:20px;font-size:13px;color:var(--text-muted);">Connect this form to <a href="https://formspree.io" rel="noopener noreferrer" target="_blank">Formspree</a> or Netlify Forms by updating the <code>action</code> attribute.</p>
+    </div>
+  </main>
+</div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-copy">&copy; 2025 TimeAnything</span>
+    <nav class="footer-nav" aria-label="Footer links">
+      <a href="about.html">About</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var s = document.getElementById('form-status');
+    if (!document.getElementById('contact-name').value.trim() || !document.getElementById('contact-email').value.trim() || !document.getElementById('contact-message').value.trim()) {
+      s.textContent = 'Please fill in all required fields.'; s.style.color = '#b32d2d'; return;
+    }
+    s.textContent = 'Connect the form to a handler to enable sending.'; s.style.color = 'var(--text-muted)';
+  });
+</script>
+</body>
+</html>

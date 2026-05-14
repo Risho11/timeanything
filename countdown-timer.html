@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online countdown timer. Set hours, minutes, and seconds. Audio alert when time runs out. Quick presets for common durations.">
+  <title>Countdown Timer Online — TimeAnything</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">Time<span class="logo-accent">Anything</span></a>
+    <nav class="header-nav"><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+  </div>
+</header>
+<button class="sidebar-toggle" id="sidebar-toggle-btn" aria-expanded="false" aria-controls="sidebar">&#9776; Timers</button>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar-nav" aria-label="Timer navigation">
+      <span class="sidebar-heading">Timers</span>
+      <ul>
+        <li><a href="pomodoro.html">Pomodoro Timer</a></li>
+        <li><a href="stopwatch.html">Online Stopwatch</a></li>
+        <li><a href="countdown-timer.html">Countdown Timer</a></li>
+        <li><a href="interval-timer.html">Interval Timer</a></li>
+        <li><a href="online-clock.html">Online Clock</a></li>
+        <li><a href="egg-timer.html">Egg / Kitchen Timer</a></li>
+        <li><a href="countdown-to-date.html">Countdown to Date</a></li>
+        <li><a href="focus-timer.html">Focus Timer</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main-content">
+    <div class="tool-header">
+      <h1>Countdown Timer</h1>
+      <p class="tool-tagline">Set any duration and count down to zero. Beeps when done.</p>
+    </div>
+    <section class="tool-section" aria-label="Countdown timer">
+      <div class="preset-buttons">
+        <button class="btn btn-secondary btn-sm" data-preset="60">1 min</button>
+        <button class="btn btn-secondary btn-sm" data-preset="300">5 min</button>
+        <button class="btn btn-secondary btn-sm" data-preset="600">10 min</button>
+        <button class="btn btn-secondary btn-sm" data-preset="900">15 min</button>
+        <button class="btn btn-secondary btn-sm" data-preset="1800">30 min</button>
+        <button class="btn btn-secondary btn-sm" data-preset="3600">1 hr</button>
+      </div>
+      <div class="tool-controls">
+        <div class="control-group"><label for="cd-hours">Hours</label><input type="number" id="cd-hours" value="0" min="0" max="23"></div>
+        <div class="control-group"><label for="cd-mins">Minutes</label><input type="number" id="cd-mins" value="5" min="0" max="59"></div>
+        <div class="control-group"><label for="cd-secs">Seconds</label><input type="number" id="cd-secs" value="0" min="0" max="59"></div>
+      </div>
+      <div class="timer-display" id="timer-display" aria-live="polite">05:00</div>
+      <div class="timer-progress"><div class="timer-progress-bar" id="progress-bar"></div></div>
+      <p class="done-message" id="done-message" hidden style="text-align:center;font-size:1.2rem;font-weight:700;color:var(--red);padding:8px 0;"></p>
+      <div class="timer-controls">
+        <button class="btn btn-primary btn-lg" id="start-btn">Start</button>
+        <button class="btn btn-secondary" id="pause-btn">Pause</button>
+        <button class="btn btn-secondary" id="reset-btn">Reset</button>
+        <button class="btn btn-secondary btn-sm" id="sound-btn">&#128276; Sound On</button>
+      </div>
+    </section>
+    <div class="ad-slot" aria-label="Advertisement"><span class="ad-label">Advertisement</span></div>
+    <div class="content-sections">
+      <section class="content-block">
+        <h2>About this timer</h2>
+        <p>Set the duration in hours, minutes, and seconds, or use one of the quick preset buttons. Click Start and the timer counts down to zero, then plays an audio alert. You can pause and resume without losing progress.</p>
+      </section>
+      <section class="content-block">
+        <h2>How to use it</h2>
+        <ol>
+          <li>Click a preset button, or enter a custom duration using the hour/minute/second fields.</li>
+          <li>Click <strong>Start</strong> to begin the countdown.</li>
+          <li>Click <strong>Pause</strong> to hold the timer. Click <strong>Start</strong> to resume.</li>
+          <li>Click <strong>Reset</strong> to go back to the set duration.</li>
+        </ol>
+      </section>
+      <div class="ad-slot" aria-label="Advertisement"><span class="ad-label">Advertisement</span></div>
+      <section class="content-block">
+        <h2>Common uses</h2>
+        <ul>
+          <li>Study sessions and timed reading</li>
+          <li>Cooking and kitchen timing</li>
+          <li>Presentations and timed speeches</li>
+          <li>Games with time limits</li>
+          <li>Limiting time spent on specific tasks</li>
+        </ul>
+      </section>
+      <section class="content-block faq-section">
+        <h2>FAQ</h2>
+        <dl>
+          <dt>Does it keep counting when I switch tabs?</dt>
+          <dd>Yes. The timer uses real wall-clock time and will beep at the correct moment even if the tab is in the background.</dd>
+          <dt>Will the sound play if my browser is muted?</dt>
+          <dd>No. The alert uses the Web Audio API and respects your system/browser volume settings.</dd>
+          <dt>What is the maximum duration?</dt>
+          <dd>Up to 23 hours, 59 minutes, and 59 seconds.</dd>
+        </dl>
+      </section>
+    </div>
+  </main>
+</div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-copy">&copy; 2025 TimeAnything</span>
+    <nav class="footer-nav" aria-label="Footer links">
+      <a href="about.html">About</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/tools/countdown.js"></script>
+</body>
+</html>

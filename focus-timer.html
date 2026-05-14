@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online focus timer for deep work. Set a custom duration, name your task, and work without distractions. Beeps when done.">
+  <title>Focus Timer — Deep Work Timer — TimeAnything</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">Time<span class="logo-accent">Anything</span></a>
+    <nav class="header-nav"><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+  </div>
+</header>
+<button class="sidebar-toggle" id="sidebar-toggle-btn" aria-expanded="false" aria-controls="sidebar">&#9776; Timers</button>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar-nav" aria-label="Timer navigation">
+      <span class="sidebar-heading">Timers</span>
+      <ul>
+        <li><a href="pomodoro.html">Pomodoro Timer</a></li>
+        <li><a href="stopwatch.html">Online Stopwatch</a></li>
+        <li><a href="countdown-timer.html">Countdown Timer</a></li>
+        <li><a href="interval-timer.html">Interval Timer</a></li>
+        <li><a href="online-clock.html">Online Clock</a></li>
+        <li><a href="egg-timer.html">Egg / Kitchen Timer</a></li>
+        <li><a href="countdown-to-date.html">Countdown to Date</a></li>
+        <li><a href="focus-timer.html">Focus Timer</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main-content">
+    <div class="tool-header">
+      <h1>Focus Timer</h1>
+      <p class="tool-tagline">Set a duration, name your task, and work without distractions.</p>
+    </div>
+    <section class="tool-section" aria-label="Focus timer">
+      <div class="tool-controls" style="margin-bottom:16px;">
+        <div class="control-group" style="flex:1;min-width:200px;">
+          <label for="focus-task">What are you working on? (optional)</label>
+          <input type="text" id="focus-task" placeholder="e.g. Write chapter 3" style="width:100%;height:34px;border:1px solid var(--border);border-radius:var(--radius);padding:7px 10px;font-size:14px;font-family:var(--font);">
+        </div>
+        <div class="control-group">
+          <label for="focus-duration">Duration (minutes)</label>
+          <input type="number" id="focus-duration" value="90" min="1" max="480">
+        </div>
+      </div>
+      <div class="preset-buttons">
+        <button class="btn btn-secondary btn-sm" data-preset="25">25 min</button>
+        <button class="btn btn-secondary btn-sm" data-preset="45">45 min</button>
+        <button class="btn btn-secondary btn-sm" data-preset="60">1 hour</button>
+        <button class="btn btn-secondary btn-sm" data-preset="90">90 min</button>
+        <button class="btn btn-secondary btn-sm" data-preset="120">2 hours</button>
+      </div>
+      <p class="timer-phase" id="timer-phase" style="min-height:20px;"></p>
+      <div class="timer-display" id="timer-display" aria-live="polite">01:30:00</div>
+      <div class="timer-progress"><div class="timer-progress-bar" id="progress-bar"></div></div>
+      <p class="done-message" id="done-message" hidden style="text-align:center;font-size:1.1rem;font-weight:700;color:var(--accent);padding:8px 0;"></p>
+      <div class="timer-controls">
+        <button class="btn btn-primary btn-lg" id="start-btn">Start Session</button>
+        <button class="btn btn-secondary" id="pause-btn">Pause</button>
+        <button class="btn btn-secondary" id="reset-btn">Reset</button>
+        <button class="btn btn-secondary btn-sm" id="sound-btn">&#128276; Sound On</button>
+      </div>
+    </section>
+    <div class="ad-slot" aria-label="Advertisement"><span class="ad-label">Advertisement</span></div>
+    <div class="content-sections">
+      <section class="content-block">
+        <h2>About this timer</h2>
+        <p>The focus timer is designed for longer, uninterrupted work sessions. Unlike the Pomodoro timer, there are no automatic breaks — you set a single duration and work through it. The task name shows as a reminder of what you committed to.</p>
+        <p>Research on deep work (Cal Newport) suggests that extended uninterrupted sessions of 90–120 minutes produce the most cognitively demanding output.</p>
+      </section>
+      <section class="content-block">
+        <h2>How to use it</h2>
+        <ol>
+          <li>Optionally enter what you are working on so it is visible during the session.</li>
+          <li>Set a duration or click a preset.</li>
+          <li>Close other tabs, silence your phone, and click <strong>Start Session</strong>.</li>
+          <li>Work until the timer beeps.</li>
+        </ol>
+      </section>
+      <div class="ad-slot" aria-label="Advertisement"><span class="ad-label">Advertisement</span></div>
+      <section class="content-block">
+        <h2>Common uses</h2>
+        <ul>
+          <li>Deep work sessions for writing, coding, or design</li>
+          <li>Exam study blocks</li>
+          <li>Creative work requiring sustained concentration</li>
+          <li>Time-boxing a single task to avoid scope creep</li>
+          <li>Any work that benefits from a defined end time</li>
+        </ul>
+      </section>
+      <section class="content-block faq-section">
+        <h2>FAQ</h2>
+        <dl>
+          <dt>How is this different from the Pomodoro timer?</dt>
+          <dd>The Pomodoro timer enforces structured work/break cycles (typically 25 min work, 5 min break). The focus timer is a single uninterrupted countdown — no automatic breaks. Use Pomodoro for tasks that benefit from rhythm; use Focus for tasks that need sustained flow.</dd>
+          <dt>What is a good duration?</dt>
+          <dd>Common choices: 25 min (Pomodoro equivalent), 45 min (lecture length), 90 min (natural ultradian rhythm), or 120 min (extended deep work). Start shorter and work up.</dd>
+        </dl>
+      </section>
+    </div>
+  </main>
+</div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-copy">&copy; 2025 TimeAnything</span>
+    <nav class="footer-nav" aria-label="Footer links">
+      <a href="about.html">About</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/tools/focus.js"></script>
+</body>
+</html>

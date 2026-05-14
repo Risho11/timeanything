@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free online interval timer for HIIT and workouts. Set work time, rest time, and number of sets. Audio cues between phases.">
+  <title>Interval Timer — HIIT Timer Online — TimeAnything</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">Time<span class="logo-accent">Anything</span></a>
+    <nav class="header-nav"><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+  </div>
+</header>
+<button class="sidebar-toggle" id="sidebar-toggle-btn" aria-expanded="false" aria-controls="sidebar">&#9776; Timers</button>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar-nav" aria-label="Timer navigation">
+      <span class="sidebar-heading">Timers</span>
+      <ul>
+        <li><a href="pomodoro.html">Pomodoro Timer</a></li>
+        <li><a href="stopwatch.html">Online Stopwatch</a></li>
+        <li><a href="countdown-timer.html">Countdown Timer</a></li>
+        <li><a href="interval-timer.html">Interval Timer</a></li>
+        <li><a href="online-clock.html">Online Clock</a></li>
+        <li><a href="egg-timer.html">Egg / Kitchen Timer</a></li>
+        <li><a href="countdown-to-date.html">Countdown to Date</a></li>
+        <li><a href="focus-timer.html">Focus Timer</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main-content">
+    <div class="tool-header">
+      <h1>Interval Timer</h1>
+      <p class="tool-tagline">HIIT and workout timer — set work time, rest time, and number of sets.</p>
+    </div>
+    <section class="tool-section" aria-label="Interval timer">
+      <div class="tool-controls" style="margin-bottom:18px;">
+        <div class="control-group"><label for="itv-work">Work (seconds)</label><input type="number" id="itv-work" value="20" min="1" max="600"></div>
+        <div class="control-group"><label for="itv-rest">Rest (seconds)</label><input type="number" id="itv-rest" value="10" min="0" max="600"></div>
+        <div class="control-group"><label for="itv-sets">Sets</label><input type="number" id="itv-sets" value="8" min="1" max="100"></div>
+        <div class="control-group"><label for="itv-prep">Prep (seconds)</label><input type="number" id="itv-prep" value="3" min="0" max="30"></div>
+      </div>
+      <p class="timer-phase" id="timer-phase"></p>
+      <div class="timer-display" id="timer-display" aria-live="polite">Ready</div>
+      <div class="timer-progress"><div class="timer-progress-bar" id="progress-bar"></div></div>
+      <p style="text-align:center;font-size:13px;color:var(--text-muted);margin:4px 0;" id="sets-done">0/8 sets</p>
+      <div class="timer-controls">
+        <button class="btn btn-primary btn-lg" id="start-btn">Start</button>
+        <button class="btn btn-secondary" id="pause-btn">Pause</button>
+        <button class="btn btn-secondary" id="reset-btn">Reset</button>
+        <button class="btn btn-secondary btn-sm" id="sound-btn">&#128276; Sound On</button>
+      </div>
+    </section>
+    <div class="ad-slot" aria-label="Advertisement"><span class="ad-label">Advertisement</span></div>
+    <div class="content-sections">
+      <section class="content-block">
+        <h2>About this timer</h2>
+        <p>This interval timer is designed for HIIT (High-Intensity Interval Training) and any workout that alternates between work and rest phases. It starts with a short preparation countdown so you can get ready before the first set begins.</p>
+        <p>An audio beep signals each phase transition. Higher pitch = work phase, lower pitch = rest phase.</p>
+      </section>
+      <section class="content-block">
+        <h2>How to use it</h2>
+        <ol>
+          <li>Set your <strong>Work</strong> duration (seconds of active effort).</li>
+          <li>Set your <strong>Rest</strong> duration (seconds of recovery).</li>
+          <li>Set the number of <strong>Sets</strong> (rounds).</li>
+          <li>Optionally adjust the <strong>Prep</strong> time — a countdown before the first set.</li>
+          <li>Click <strong>Start</strong>. The timer handles all phase transitions automatically.</li>
+        </ol>
+      </section>
+      <div class="ad-slot" aria-label="Advertisement"><span class="ad-label">Advertisement</span></div>
+      <section class="content-block">
+        <h2>Common uses</h2>
+        <ul>
+          <li>Tabata protocol (20 sec work / 10 sec rest × 8 rounds)</li>
+          <li>HIIT cardio and circuit training</li>
+          <li>Weightlifting with timed rest periods</li>
+          <li>Stretching and yoga flows with timed holds</li>
+          <li>Study sprints with structured breaks</li>
+        </ul>
+      </section>
+      <section class="content-block faq-section">
+        <h2>FAQ</h2>
+        <dl>
+          <dt>What is the classic Tabata setting?</dt>
+          <dd>20 seconds work, 10 seconds rest, 8 sets. Set prep to 0 if you want to start immediately.</dd>
+          <dt>Can I set rest to zero?</dt>
+          <dd>Yes — set Rest to 0 for back-to-back sets with no rest period.</dd>
+          <dt>Does it work in the background?</dt>
+          <dd>Yes. Time tracking is based on real wall-clock time, so it remains accurate when the tab is not active.</dd>
+        </dl>
+      </section>
+    </div>
+  </main>
+</div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-copy">&copy; 2025 TimeAnything</span>
+    <nav class="footer-nav" aria-label="Footer links">
+      <a href="about.html">About</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/tools/interval.js"></script>
+</body>
+</html>
