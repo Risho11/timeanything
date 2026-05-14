@@ -1,9 +1,9 @@
 /* ============================================================
    TimeAnything — Stylesheet
-   Fonts: Syne (display/timers) + Outfit (body)
+   Fonts: Space Grotesk (display/timers/headings) + Syne (body)
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Syne:wght@400;500;600;700&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -23,7 +23,7 @@
   --sidebar-w:    224px;
   --header-h:     50px;
   --font:         'Syne', system-ui, sans-serif;
-  --font-display: 'Syne', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
   --mono:         'Courier New', Courier, monospace;
   --green:        #1a7a46;
   --red:          #b32d2d;
