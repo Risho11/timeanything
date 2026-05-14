@@ -3,7 +3,7 @@
    Fonts: Syne (display/timers) + Outfit (body)
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -22,7 +22,7 @@
   --radius:       4px;
   --sidebar-w:    224px;
   --header-h:     50px;
-  --font:         'Outfit', system-ui, -apple-system, sans-serif;
+  --font:         'Syne', system-ui, sans-serif;
   --font-display: 'Syne', system-ui, sans-serif;
   --mono:         'Courier New', Courier, monospace;
   --green:        #1a7a46;
@@ -64,7 +64,7 @@ a:hover { color: var(--accent-hover); }
 
 /* ---- Tool header ---- */
 .tool-header { margin-bottom: 18px; }
-.tool-header h1 { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; line-height: 1.2; margin-bottom: 4px; letter-spacing: -0.3px; }
+.tool-header h1 { font-family: var(--font-display); font-size: 1.85rem; font-weight: 700; line-height: 1.2; margin-bottom: 4px; letter-spacing: -0.2px; }
 .tool-tagline { font-size: 14px; color: var(--text-muted); }
 
 /* ---- Tool section ---- */
@@ -141,7 +141,7 @@ a:hover { color: var(--accent-hover); }
 
 /* ---- Hub grid ---- */
 .hub-intro { margin-bottom: 24px; }
-.hub-intro h1 { font-family: var(--font-display); font-size: 1.7rem; font-weight: 800; margin-bottom: 6px; }
+.hub-intro h1 { font-family: var(--font-display); font-size: 1.9rem; font-weight: 700; margin-bottom: 6px; }
 .hub-intro p { color: var(--text-muted); max-width: 560px; }
 .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(185px, 1fr)); gap: 12px; margin-bottom: 24px; }
 .tool-card { display: block; background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; text-decoration: none; color: var(--text); transition: border-color 0.1s, background 0.1s; }
