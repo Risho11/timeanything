@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.timeanything.com/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://www.timeanything.com/pomodoro.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://www.timeanything.com/stopwatch.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://www.timeanything.com/countdown-timer.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://www.timeanything.com/interval-timer.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://www.timeanything.com/online-clock.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://www.timeanything.com/egg-timer.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://www.timeanything.com/countdown-to-date.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://www.timeanything.com/focus-timer.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://www.timeanything.com/about.html</loc><priority>0.4</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.timeanything.com/contact.html</loc><priority>0.4</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.timeanything.com/privacy.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://www.timeanything.com/terms.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+</urlset>
