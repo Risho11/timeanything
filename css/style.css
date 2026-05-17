@@ -36,8 +36,9 @@ a:hover { color: var(--accent-hover); }
 
 /* ---- Header ---- */
 .site-header { position: sticky; top: 0; z-index: 200; height: var(--header-h); background: var(--header-bg); border-bottom: 1px solid var(--border); }
-.header-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; padding: 0 20px; max-width: 1280px; margin: 0 auto; }
-.logo { font-family: var(--font-display); font-size: 17px; font-weight: 800; color: var(--text); text-decoration: none; letter-spacing: -0.2px; white-space: nowrap; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; padding: 0 20px; }
+.logo { display: flex; align-items: center; gap: 8px; font-family: var(--font-display); font-size: 17px; font-weight: 800; color: var(--text); text-decoration: none; letter-spacing: -0.2px; white-space: nowrap; }
+.logo-img { height: 26px; width: 26px; object-fit: contain; flex-shrink: 0; }
 .logo .logo-accent { color: var(--accent); }
 .header-nav { display: flex; gap: 20px; }
 .header-nav a { font-size: 13.5px; color: var(--text-muted); text-decoration: none; }
