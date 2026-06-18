@@ -41,6 +41,53 @@
     }
   }
   </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I record lap times?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes \u2014 click the Lap button during a running stopwatch. All lap times are listed below the display."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the stopwatch accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Accurate to the hundredth of a second. Uses Date.now() so it stays accurate even when the tab is in the background."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I copy my lap times?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Click Copy Laps to copy all lap times to your clipboard as plain text."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it pause when I switch tabs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No \u2014 the stopwatch continues running in the background. Switching tabs does not affect the count."
+      }
+    }
+  ]
+}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YWVGL7ZGEX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YWVGL7ZGEX');
+</script>
 </head>
 <body>
 <header class="site-header">
